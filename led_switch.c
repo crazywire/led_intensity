@@ -16,7 +16,7 @@
 
 volatile unsigned int tick = 0;
 
-int f_tick = F_CPU/(N*TOP); //scaled frequency of the overflow(frequency of tick)
+int f_tick = F_CPU/(N*(TOP+1)); //scaled frequency of the overflow(frequency of tick)
 
 
 ISR(TIMER0_OVF_vect)
