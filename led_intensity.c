@@ -20,12 +20,8 @@ int main(void)
     while (1) 
     {
 		//increase intensity
-		for(OCR2A = 0; OCR2A < TOP; OCR2A++) 
-		_delay_ms(10);	    			
-    	
-		//decrease intensity	    		
-    	for(; OCR2A < 1; OCR2A--)
-    	_delay_ms(10);
+		OCR2A++;
+		_delay_ms(10);
 	}
 }
 

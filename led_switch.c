@@ -20,9 +20,7 @@ int f_tick = F_CPU/(N*(TOP+1)); //scaled frequency of the overflow(frequency of 
 
 
 ISR(TIMER0_OVF_vect)
-{
-	tick++;
-	
+{	
 	//turn off led at 5s
 	if(tick == 5*f_tick){
 		LED_OFF();
@@ -32,6 +30,8 @@ ISR(TIMER0_OVF_vect)
 		LED_ON();
 		tick = 0;
 	}
+
+	tick++;
 }
 
 int main(void)
